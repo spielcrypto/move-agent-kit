@@ -52,6 +52,7 @@ import {
 	ThalaStakeTokenTool,
 	ThalaUnstakeTokenTool,
 } from "./thala"
+import { ThalaCreatePoolTool } from "./thala/create-pool"
 
 export const createAptosTools = (agent: AgentRuntime, config: { filter?: ToolsNameList[] } = {}) => {
 	const tools = [
@@ -96,6 +97,7 @@ export const createAptosTools = (agent: AgentRuntime, config: { filter?: ToolsNa
 		new ThalaRedeemMODTool(agent),
 		new ThalaUnstakeTokenTool(agent),
 		new ThalaStakeTokenTool(agent),
+		new ThalaCreatePoolTool(agent),
 		// Panora tools
 		new PanoraSwapTool(agent),
 		// OpenAI tools

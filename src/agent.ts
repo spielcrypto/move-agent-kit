@@ -48,6 +48,7 @@ import { createImage } from "./tools/openai"
 import { swapWithPanora } from "./tools/panora"
 import {
 	addLiquidityWithThala,
+	createPoolWithThala,
 	mintMODWithThala,
 	redeemMODWithThala,
 	removeLiquidityWithThala,
@@ -214,6 +215,17 @@ export class AgentRuntime {
 
 	removeLiquidityWithThala(mintX: MoveStructId, mintY: MoveStructId, lpAmount: number) {
 		return removeLiquidityWithThala(this, mintX, mintY, lpAmount)
+	}
+
+	createPoolWithThala(
+		mintX: MoveStructId | string,
+		mintY: MoveStructId | string,
+		amountX: number,
+		amountY: number,
+		feeTier: number,
+		amplificationFactor: number
+	) {
+		return createPoolWithThala(this, mintX, mintY, amountX, amountY, feeTier, amplificationFactor)
 	}
 
 	// panora

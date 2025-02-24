@@ -6,6 +6,7 @@ import {
 	borrowToken,
 	burnNFT,
 	burnToken,
+	claimReward,
 	createToken,
 	getBalance,
 	getPoolDetails,
@@ -167,6 +168,10 @@ export class AgentRuntime {
 
 	createPool(mintX: MoveStructId, mintY: MoveStructId) {
 		return createPool(this, mintX, mintY)
+	}
+
+	claimReward(rewardCoinType: MoveStructId | string) {
+		return claimReward(this, rewardCoinType)
 	}
 
 	// Aries

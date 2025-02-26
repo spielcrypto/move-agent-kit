@@ -14,6 +14,7 @@ import {
 import { AriesBorrowTool, AriesCreateProfileTool, AriesLendTool, AriesRepayTool, AriesWithdrawTool } from "./aries"
 import {
 	JouleBorrowTokenTool,
+	JouleClaimRewardTool,
 	JouleGetPoolDetails,
 	JouleGetUserAllPositions,
 	JouleGetUserPosition,
@@ -52,6 +53,7 @@ import {
 	ThalaStakeTokenTool,
 	ThalaUnstakeTokenTool,
 } from "./thala"
+import { ThalaCreatePoolTool } from "./thala/create-pool"
 
 export const createAptosTools = (agent: AgentRuntime, config: { filter?: ToolsNameList[] } = {}) => {
 	const tools = [
@@ -78,6 +80,7 @@ export const createAptosTools = (agent: AgentRuntime, config: { filter?: ToolsNa
 		new JouleGetPoolDetails(agent),
 		new JouleGetUserPosition(agent),
 		new JouleGetUserAllPositions(agent),
+		new JouleClaimRewardTool(agent),
 		// LiquidSwap tools
 		new LiquidSwapCreatePoolTool(agent),
 		new LiquidSwapAddLiquidityTool(agent),
@@ -96,6 +99,7 @@ export const createAptosTools = (agent: AgentRuntime, config: { filter?: ToolsNa
 		new ThalaRedeemMODTool(agent),
 		new ThalaUnstakeTokenTool(agent),
 		new ThalaStakeTokenTool(agent),
+		new ThalaCreatePoolTool(agent),
 		// Panora tools
 		new PanoraSwapTool(agent),
 		// OpenAI tools

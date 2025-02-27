@@ -15,7 +15,7 @@ export class WalletSigner extends BaseSigner {
 
 	public override getAddress(): AccountAddress {
 		const walletAddress = this.wallet?.account?.address
-		return walletAddress ? AccountAddress.fromString(walletAddress) : this.account.accountAddress
+		return walletAddress ? AccountAddress.fromString(walletAddress.toString()) : this.account.accountAddress
 	}
 
 	async signTransaction(transaction: AnyRawTransaction) {

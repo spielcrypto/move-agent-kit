@@ -1,6 +1,13 @@
 // src/signers/local-signer.ts
 
-import { type Account, type AnyRawTransaction, Aptos, AptosConfig, Network } from "@aptos-labs/ts-sdk"
+import {
+	type Account,
+	type AccountAddress,
+	type AnyRawTransaction,
+	Aptos,
+	AptosConfig,
+	Network,
+} from "@aptos-labs/ts-sdk"
 import { BaseSigner } from "./base-signer"
 
 export class LocalSigner extends BaseSigner {
@@ -8,6 +15,10 @@ export class LocalSigner extends BaseSigner {
 		const config = new AptosConfig({ network })
 		const aptos = new Aptos(config)
 		super(account, aptos)
+	}
+
+	public getAddress(): AccountAddress {
+		return this.account.accountAddress
 	}
 
 	async signTransaction(transaction: AnyRawTransaction) {

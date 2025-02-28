@@ -6,6 +6,7 @@ import {
 	borrowToken,
 	burnNFT,
 	burnToken,
+	claimReward,
 	createToken,
 	getBalance,
 	getPoolDetails,
@@ -30,17 +31,6 @@ import {
 	repayAriesToken,
 	withdrawAriesToken,
 } from "./tools/aries"
-import { addLiquidity, createPool, removeLiquidity, swap } from "./tools/liquidswap"
-import { swapWithPanora } from "./tools/panora"
-import {
-	addLiquidityWithThala,
-	mintMODWithThala,
-	redeemMODWithThala,
-	removeLiquidityWithThala,
-	stakeTokenWithThala,
-	unstakeAPTWithThala,
-} from "./tools/thala"
-
 import {
 	borrowTokenWithEchelon,
 	lendTokenWithEchelon,
@@ -48,7 +38,24 @@ import {
 	withdrawTokenWithEchelon,
 } from "./tools/echelon"
 import { stakeTokenWithEcho, unstakeTokenWithEcho } from "./tools/echo"
+import { addLiquidity, createPool, removeLiquidity, swap } from "./tools/liquidswap"
+import {
+	closePositionWithMerkleTrade,
+	getPositionsWithMerkleTrade,
+	placeLimitOrderWithMerkleTrade,
+	placeMarketOrderWithMerkleTrade,
+} from "./tools/merkletrade"
 import { createImage } from "./tools/openai"
+import { swapWithPanora } from "./tools/panora"
+import {
+	addLiquidityWithThala,
+	createPoolWithThala,
+	mintMODWithThala,
+	redeemMODWithThala,
+	removeLiquidityWithThala,
+	stakeTokenWithThala,
+	unstakeAPTWithThala,
+} from "./tools/thala"
 import { getTokenByTokenName } from "./utils/get-pool-address-by-token-name"
 
 export class AgentRuntime {
@@ -163,6 +170,10 @@ export class AgentRuntime {
 		return createPool(this, mintX, mintY)
 	}
 
+	claimReward(rewardCoinType: MoveStructId | string) {
+		return claimReward(this, rewardCoinType)
+	}
+
 	// Aries
 
 	createAriesProfile() {
@@ -211,6 +222,17 @@ export class AgentRuntime {
 		return removeLiquidityWithThala(this, mintX, mintY, lpAmount)
 	}
 
+	createPoolWithThala(
+		mintX: MoveStructId | string,
+		mintY: MoveStructId | string,
+		amountX: number,
+		amountY: number,
+		feeTier: number,
+		amplificationFactor: number
+	) {
+		return createPoolWithThala(this, mintX, mintY, amountX, amountY, feeTier, amplificationFactor)
+	}
+
 	// panora
 
 	swapWithPanora(fromToken: string, toToken: string, swapAmount: number, toWalletAddress?: string) {
@@ -249,5 +271,29 @@ export class AgentRuntime {
 
 	borrowTokenWithEchelon(mintType: MoveStructId, amount: number, poolAddress: string, fungibleAsset: boolean) {
 		return borrowTokenWithEchelon(this, mintType, amount, poolAddress, fungibleAsset)
+	}
+
+	// MerkleTrade
+
+	placeMarketOrderWithMerkleTrade(pair: string, isLong: boolean, sizeDelta: number, collateralDelta: number) {
+		return placeMarketOrderWithMerkleTrade(this, pair, isLong, sizeDelta, collateralDelta)
+	}
+
+	placeLimitOrderWithMerkleTrade(
+		pair: string,
+		isLong: boolean,
+		sizeDelta: number,
+		collateralDelta: number,
+		price: number
+	) {
+		return placeLimitOrderWithMerkleTrade(this, pair, isLong, sizeDelta, collateralDelta, price)
+	}
+
+	closePositionWithMerkleTrade(pair: string, isLong: boolean) {
+		return closePositionWithMerkleTrade(this, pair, isLong)
+	}
+
+	getPositionsWithMerkleTrade() {
+		return getPositionsWithMerkleTrade(this)
 	}
 }

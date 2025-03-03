@@ -1,6 +1,6 @@
 {
-	"name": "move-agent-kit",
-	"version": "0.2.0",
+	"name": "move-agent-kit-fullstack",
+	"version": "0.2.3",
 	"description": "",
 	"main": "./dist/index.js",
 	"module": "./dist/index.mjs",

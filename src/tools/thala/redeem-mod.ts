@@ -11,7 +11,7 @@ import type { AgentRuntime } from "../../agent"
 export async function redeemMODWithThala(agent: AgentRuntime, mintType: MoveStructId, amount: number): Promise<string> {
 	try {
 		const committedTransactionHash = await agent.account.sendTransaction({
-			sender: agent.account.getAddress(),
+			sender: agent.account.getAddress().toString(),
 			data: {
 				function: "0x6f986d146e4a90b828d8c12c14b6f4e003fdff11a8eecceceb63744363eaac01::psm_scripts::redeem",
 				typeArguments: [mintType],

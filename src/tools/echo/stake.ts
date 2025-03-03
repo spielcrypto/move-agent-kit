@@ -9,7 +9,7 @@ import type { AgentRuntime } from "../../agent"
 export async function stakeTokenWithEcho(agent: AgentRuntime, amount: number): Promise<string> {
 	try {
 		const committedTransactionHash = await agent.account.sendTransaction({
-			sender: agent.account.getAddress(),
+			sender: agent.account.getAddress().toString(),
 			data: {
 				function: "0xa0281660ff6ca6c1b68b55fcb9b213c2276f90ad007ad27fd003cf2f3478e96e::lsdmanage::stake",
 				functionArguments: [amount],

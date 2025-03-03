@@ -21,7 +21,7 @@ export async function removeLiquidity(
 ): Promise<string> {
 	try {
 		const committedTransactionHash = await agent.account.sendTransaction({
-			sender: agent.account.getAddress(),
+			sender: agent.account.getAddress().toString(),
 			data: {
 				function: "0x9dd974aea0f927ead664b9e1c295e4215bd441a9fb4e53e5ea0bf22f356c8a2b::router::remove_liquidity_v05",
 				typeArguments: [

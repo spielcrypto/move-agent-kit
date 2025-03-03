@@ -11,7 +11,7 @@ import type { AgentRuntime } from "../../agent"
 export async function repayAriesToken(agent: AgentRuntime, mintType: MoveStructId, amount: number): Promise<string> {
 	try {
 		const committedTransactionHash = await agent.account.sendTransaction({
-			sender: agent.account.getAddress(),
+			sender: agent.account.getAddress().toString(),
 			data: {
 				function: "0x9770fa9c725cbd97eb50b2be5f7416efdfd1f1554beb0750d4dae4c64e860da3::controller::deposit",
 				typeArguments: [mintType],

@@ -19,7 +19,7 @@ export async function addLiquidityWithThala(
 ): Promise<string> {
 	try {
 		const committedTransactionHash = await agent.account.sendTransaction({
-			sender: agent.account.getAddress(),
+			sender: agent.account.getAddress().toString(),
 			data: {
 				function:
 					"0x48271d39d0b05bd6efca2278f22277d6fcc375504f9839fd73f74ace240861af::weighted_pool_scripts::add_liquidity",

@@ -10,7 +10,7 @@ import type { AgentRuntime } from "../../agent"
 export async function burnToken(agent: AgentRuntime, amount: number, mint: string): Promise<string> {
 	try {
 		const committedTransactionHash = await agent.account.sendTransaction({
-			sender: agent.account.getAddress(),
+			sender: agent.account.getAddress().toString(),
 			data: {
 				function: "0x67c8564aee3799e9ac669553fdef3a3828d4626f24786b6a5642152fa09469dd::launchpad::burn_fa",
 				functionArguments: [mint, amount],

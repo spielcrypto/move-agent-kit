@@ -21,8 +21,7 @@ export async function lendToken(
 	amount: number,
 	mint: MoveStructId,
 	positionId: string,
-	newPosition: boolean,
-	fungibleAsset: boolean
+	newPosition: boolean
 ): Promise<{ hash: string; positionId: string }> {
 	const DEFAULT_FUNCTIONAL_ARGS = [positionId, amount, newPosition]
 
@@ -39,8 +38,8 @@ export async function lendToken(
 
 	try {
 		const committedTransactionHash = await agent.account.sendTransaction({
-			sender: agent.account.getAddress(),
-			data: fungibleAsset ? FUNGIBLE_ASSET_DATA : COIN_STANDARD_DATA,
+			sender: agent.account.getAddress().toString(),
+			data: mint.split("::").length === 3 ? COIN_STANDARD_DATA : FUNGIBLE_ASSET_DATA,
 		})
 
 		const signedTransaction = await agent.aptos.waitForTransaction({

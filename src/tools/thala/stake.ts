@@ -9,7 +9,7 @@ import type { AgentRuntime } from "../../agent"
 export async function stakeTokenWithThala(agent: AgentRuntime, amount: number): Promise<string> {
 	try {
 		const committedTransactionHash = await agent.account.sendTransaction({
-			sender: agent.account.getAddress(),
+			sender: agent.account.getAddress().toString(),
 			data: {
 				function: "0xfaf4e633ae9eb31366c9ca24214231760926576c7b625313b3688b5e900731f6::scripts::stake_APT_and_thAPT",
 				functionArguments: [amount],

@@ -11,7 +11,7 @@ import type { AgentRuntime } from "../../agent"
 export async function unstakeTokens(agent: AgentRuntime, to: AccountAddress, amount: number): Promise<string> {
 	try {
 		const committedTransactionHash = await agent.account.sendTransaction({
-			sender: agent.account.getAddress(),
+			sender: agent.account.getAddress().toString(),
 			data: {
 				function: "0x111ae3e5bc816a5e63c2da97d0aa3886519e0cd5e4b046659fa35796bd11542a::router::unstake_entry",
 				functionArguments: [amount, to.toString()],

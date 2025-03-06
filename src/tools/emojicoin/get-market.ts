@@ -3,7 +3,7 @@ import { type SymbolEmoji, getMarketAddress } from "@econia-labs/emojicoin-sdk"
 import type { AgentRuntime } from "../../agent"
 
 /**
- * Get details about a user's position
+ * Get history of emojicoin market
  * @param agent MoveAgentKit instance
  * @param emojis Emojis
  * @returns Position details

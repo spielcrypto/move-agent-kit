@@ -65,7 +65,6 @@
 		"@pythnetwork/pyth-aptos-js": "^1.4.2",
 		"axios": "^1.7.9",
 		"bs58": "^6.0.0",
-		"emoji-regex": "^10.4.0",
 		"inquirer": "^12.3.2",
 		"langchain": "^0.3.11",
 		"openai": "^4.79.1",

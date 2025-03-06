@@ -1,5 +1,4 @@
 import { type SymbolEmoji, getMarketAddress, toChatMessageEntryFunctionArgs } from "@econia-labs/emojicoin-sdk"
-import emojiRegex from "emoji-regex"
 import type { AgentRuntime } from "../../agent"
 /**
  * Write a message with emojis on chat

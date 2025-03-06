@@ -45,6 +45,12 @@ export type ToolsNameList =
 	| "merkle_trade_place_limit_order"
 	| "merkle_trade_close_position"
 	| "merkle_trade_get_position"
+	| "emojicoin_chat"
+	| "emojicoin_get_market"
+	| "emojicoin_swap"
+	| "emojicoin_provide_liquidity"
+	| "emojicoin_remove_liquidity"
+	| "emojicoin_register_market"
 
 export type SignedTransactionResponse = {
 	senderAuthenticator?: AccountAuthenticator

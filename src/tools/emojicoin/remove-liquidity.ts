@@ -1,4 +1,4 @@
-import { INTEGRATOR_ADDRESS, type SymbolEmoji, getMarketAddress } from "@econia-labs/emojicoin-sdk"
+import { type SymbolEmoji, getMarketAddress } from "@econia-labs/emojicoin-sdk"
 import type { AgentRuntime } from "../../agent"
 
 /**
@@ -11,7 +11,7 @@ import type { AgentRuntime } from "../../agent"
  * const transaction = await removeLiquidityEmojicoins(agent, emojis, amount);
  * ```
  */
-export async function removeLiquidityEmojicoins(
+export async function removeLiquidityEmojicoin(
 	agent: AgentRuntime,
 	emojis: SymbolEmoji[],
 	amount: number

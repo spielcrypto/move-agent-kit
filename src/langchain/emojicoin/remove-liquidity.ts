@@ -9,7 +9,7 @@ export class EmojicoinRemoveLiquidityTool extends Tool {
   - Each element needs to be emoji and only one emoji per element.
 
   Inputs ( input is a JSON string ):
-  emojis: string[] string[] eg ["🚀", "🌛"] (required)
+  emojis: string[] eg ["🚀", "🌛"] (required)
   amount: number, eg 1 or 0.01 (required)
   `
 
@@ -23,7 +23,7 @@ export class EmojicoinRemoveLiquidityTool extends Tool {
 
 			const amount = convertAmountFromHumanReadableToOnChain(parsedInput.amount, 8)
 
-			const provideLiqudityEmojicoinTransactionHash = await this.agent.removeLiquidityEmojicoins(
+			const provideLiqudityEmojicoinTransactionHash = await this.agent.removeLiquidityEmojicoin(
 				parsedInput.emojis,
 				amount
 			)

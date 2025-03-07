@@ -41,9 +41,8 @@ import {
 	withdrawTokenWithEchelon,
 } from "./tools/echelon"
 import { stakeTokenWithEcho, unstakeTokenWithEcho } from "./tools/echo"
-import { chatEmojicoin } from "./tools/emojicoin/chat"
-import { provideLiquidityEmojicoins } from "./tools/emojicoin/provide-liquidity"
-import { removeLiquidityEmojicoins } from "./tools/emojicoin/remove-liquidity"
+import { provideLiquidityEmojicoin } from "./tools/emojicoin/provide-liquidity"
+import { removeLiquidityEmojicoin } from "./tools/emojicoin/remove-liquidity"
 import { swapEmojicoins } from "./tools/emojicoin/swap"
 import { addLiquidity, createPool, removeLiquidity, swap } from "./tools/liquidswap"
 import {
@@ -308,20 +307,16 @@ export class AgentRuntime {
 		return registerMarketEmojicoin(this, emojis)
 	}
 
-	chatEmojicoin(message: string) {
-		return chatEmojicoin(this, message)
-	}
-
 	swapEmojicoins(emojis: SymbolEmoji[], Amount: number, isSelling: boolean) {
 		return swapEmojicoins(this, emojis, Amount, isSelling)
 	}
 
-	provideLiquidityEmojicoins(emojis: SymbolEmoji[], amount: number) {
-		return provideLiquidityEmojicoins(this, emojis, amount)
+	provideLiquidityEmojicoin(emojis: SymbolEmoji[], amount: number) {
+		return provideLiquidityEmojicoin(this, emojis, amount)
 	}
 
-	removeLiquidityEmojicoins(emojis: SymbolEmoji[], amount: number) {
-		return removeLiquidityEmojicoins(this, emojis, amount)
+	removeLiquidityEmojicoin(emojis: SymbolEmoji[], amount: number) {
+		return removeLiquidityEmojicoin(this, emojis, amount)
 	}
 
 	getMarketEmojicoin(emojis: SymbolEmoji[]) {

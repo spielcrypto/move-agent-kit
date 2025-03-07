@@ -9,7 +9,7 @@ export class EmojicoinGetMarketTool extends Tool {
   - Each element needs to be emoji and only one emoji per element.
 
   Inputs ( input is a JSON string ):
-    emojis: string[] string[] eg ["🚀", "🌛"] (required)
+    emojis: string[] eg ["🚀", "🌛"] (required)
   `
 
 	constructor(private agent: AgentRuntime) {

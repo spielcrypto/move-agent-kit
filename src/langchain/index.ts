@@ -38,7 +38,6 @@ import {
 } from "./echelon"
 import { EchoStakeTokenTool, EchoUnstakeTokenTool } from "./echo"
 import {
-	EmojicoinChatTool,
 	EmojicoinGetMarketTool,
 	EmojicoinProvideLiquidityTool,
 	EmojicoinRegisterMarketTool,
@@ -126,7 +125,6 @@ export const createAptosTools = (agent: AgentRuntime, config: { filter?: ToolsNa
 		new MerkleTradePlaceLimitOrderTool(agent),
 		new MerkleTradePlaceMarketOrderTool(agent),
 		// Emojicoin Tools
-		new EmojicoinChatTool(agent),
 		new EmojicoinGetMarketTool(agent),
 		new EmojicoinProvideLiquidityTool(agent),
 		new EmojicoinRegisterMarketTool(agent),

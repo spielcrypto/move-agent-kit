@@ -10,7 +10,7 @@ export class EmojicoinSwapTool extends Tool {
   - Each element needs to be emoji and only one emoji per element.
 
   Inputs ( input is a JSON string ):
-  emojis: string[] string[] eg ["🚀", "🌛"] (required)
+  emojis: string[] eg ["🚀", "🌛"] (required)
   amount: number, eg 1 or 0.01 (required)
   isSelling: boolean (required)
   `

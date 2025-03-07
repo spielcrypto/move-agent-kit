@@ -1,4 +1,4 @@
-import { INTEGRATOR_ADDRESS, RegisterMarket, type SymbolEmoji, toMarketEmojiData } from "@econia-labs/emojicoin-sdk"
+import { INTEGRATOR_ADDRESS, type SymbolEmoji, toMarketEmojiData } from "@econia-labs/emojicoin-sdk"
 import type { AgentRuntime } from "../../agent"
 
 /**

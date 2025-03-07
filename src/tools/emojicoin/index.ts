@@ -1,5 +1,4 @@
 export * from "./register-market"
-export * from "./chat"
 export * from "./swap"
 export * from "./provide-liquidity"
 export * from "./remove-liquidity"

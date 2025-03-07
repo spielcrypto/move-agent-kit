@@ -45,7 +45,6 @@ export type ToolsNameList =
 	| "merkle_trade_place_limit_order"
 	| "merkle_trade_close_position"
 	| "merkle_trade_get_position"
-	| "emojicoin_chat"
 	| "emojicoin_get_market"
 	| "emojicoin_swap"
 	| "emojicoin_provide_liquidity"
@@ -56,3 +55,5 @@ export type SignedTransactionResponse = {
 	senderAuthenticator?: AccountAuthenticator
 	signature?: Uint8Array<ArrayBufferLike>
 }
+
+export { SymbolEmoji } from "@econia-labs/emojicoin-sdk"

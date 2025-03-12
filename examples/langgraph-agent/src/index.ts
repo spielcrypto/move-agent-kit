@@ -4,6 +4,7 @@ import { managerNode, managerRouter } from "./agents/manager"
 import { writerNode, writerTool } from "./agents/tweet-writer-agent"
 import { postNode, postOnXTool } from "./agents/x-post-agent"
 import { StateAnnotation } from "./state"
+import { HumanMessage } from "@langchain/core/messages"
 
 const workflow = new StateGraph(StateAnnotation)
 	.addNode("manager", managerNode)
@@ -21,3 +22,9 @@ const workflow = new StateGraph(StateAnnotation)
 	.addEdge("postOnTwitter", END)
 
 export const graph = workflow.compile()
+
+graph.invoke({
+	messages: [
+		new HumanMessage("what is my address?")
+	]
+}).then(x => console.log(x))

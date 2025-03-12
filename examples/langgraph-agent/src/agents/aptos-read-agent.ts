@@ -6,7 +6,7 @@ import {
 	AptosGetTokenPriceTool,
 	AptosTransactionTool,
 	JouleGetPoolDetails,
-} from "../../../../src/langchain"
+} from "move-agent-kit"
 import { setupAgentKit } from "../agent"
 import { StateAnnotation } from "../state"
 

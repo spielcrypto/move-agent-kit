@@ -4,7 +4,7 @@ import { type AgentRuntime, parseJson } from "../.."
 
 export class JouleBorrowTokenTool extends Tool {
 	name = "joule_borrow_token"
-	description = `this tool can be used to borrow APT, tokens or fungible asset from a position
+	description = `this tool can be used to borrow APT, tokens or fungible asset from a position in Joule protocol
 
   if you want to borrow APT, mint will be "0x1::aptos_coin::AptosCoin"
   if you want to borrow token other than APT, you need to provide the mint of that specific token
@@ -14,6 +14,11 @@ export class JouleBorrowTokenTool extends Tool {
   amount: number, eg 1 or 0.01 (required)
   mint: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" (required)
   positionId: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa" (required)
+  
+  Examples:
+  - "I want to borrow 0.5 APT from Joule"
+  - "Borrow 10 USDT from position 1234"
+  - "Get a loan of 2 APT from my Joule position"
   `
 
 	constructor(private agent: AgentRuntime) {

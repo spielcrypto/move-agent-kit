@@ -10,7 +10,13 @@ export class AmnisStakeTool extends Tool {
 
   Inputs ( input is a JSON string ) (required):
   amount: number, eg 1 or 0.01 (required)
-  recipient: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa" (optional)`
+  recipient: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa" (optional)
+  
+  Examples:
+  - "I want to stake 1 APT with Amnis"
+  - "Stake 0.5 APT and receive stAPT"
+  - "Stake 10 APT with Amnis and send stAPT to 0xabc123..."
+  `
 
 	constructor(private agent: AgentRuntime) {
 		super()

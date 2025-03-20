@@ -61,6 +61,7 @@
 		"@langchain/core": "^0.3.29",
 		"@langchain/langgraph": "^0.2.39",
 		"@merkletrade/ts-sdk": "^1.0.0",
+		"@modelcontextprotocol/sdk": "^1.7.0",
 		"@pythnetwork/client": "^2.22.0",
 		"@pythnetwork/pyth-aptos-js": "^1.4.2",
 		"axios": "^1.7.9",

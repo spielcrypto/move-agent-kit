@@ -9,7 +9,7 @@ import {
 } from "@aptos-labs/ts-sdk"
 import { ChatAnthropic } from "@langchain/anthropic"
 import { config } from "dotenv"
-import { AgentRuntime, LocalSigner } from "../../../src"
+import { AgentRuntime, LocalSigner } from "move-agent-kit"
 config()
 
 export const llm = new ChatAnthropic({

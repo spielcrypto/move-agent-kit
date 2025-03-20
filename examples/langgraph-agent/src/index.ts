@@ -1,3 +1,4 @@
+import { HumanMessage } from "@langchain/core/messages"
 import { END, START, StateGraph } from "@langchain/langgraph"
 import { aptosReadNode } from "./agents/aptos-read-agent"
 import { managerNode, managerRouter } from "./agents/manager"
@@ -21,3 +22,9 @@ const workflow = new StateGraph(StateAnnotation)
 	.addEdge("postOnTwitter", END)
 
 export const graph = workflow.compile()
+
+graph
+	.invoke({
+		messages: [new HumanMessage("what is my address?")],
+	})
+	.then((x) => console.log(x))

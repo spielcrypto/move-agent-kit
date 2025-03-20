@@ -11,7 +11,14 @@ export class AptosBalanceTool extends Tool {
 
   Inputs ( input is a JSON string ):
   mint: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" or "
-  0x357b0b74bc833e95a115ad22604854d6b0fca151cecd94111770e5d6ffc9dc2b" (optional)`
+  0x357b0b74bc833e95a115ad22604854d6b0fca151cecd94111770e5d6ffc9dc2b" (optional)
+  
+  Examples:
+  - "What is my APT balance?"
+  - "Check my USDT balance"
+  - "Show me how much CASH I have"
+  - "What's my balance for token 0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT"
+  `
 
 	constructor(private agent: AgentRuntime) {
 		super()

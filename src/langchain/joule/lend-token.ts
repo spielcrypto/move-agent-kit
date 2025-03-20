@@ -4,7 +4,7 @@ import { type AgentRuntime, parseJson } from "../.."
 
 export class JouleLendTokenTool extends Tool {
 	name = "joule_lend_token"
-	description = `this tool can be used to lend APT, tokens or fungible asset to a position
+	description = `this tool can be used to lend APT, tokens or fungible asset to a position in Joule protocol
 
   if you want to lend APT, mint will be "0x1::aptos_coin::AptosCoin"
   if you want to lend token other than APT, you need to provide the mint of that specific token
@@ -16,7 +16,12 @@ export class JouleLendTokenTool extends Tool {
   amount: number, eg 1 or 0.01 (required)
   mint: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" (required)
   positionId: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa" (required)
-  newPosition: boolean, (required)  
+  newPosition: boolean, (required)
+  
+  Examples:
+  - "I want to lend 1 APT to Joule"
+  - "Lend 5 USDT to position 1234"
+  - "Add 0.5 APT to my Joule lending position"
   `
 
 	constructor(private agent: AgentRuntime) {

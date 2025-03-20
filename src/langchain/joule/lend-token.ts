@@ -9,7 +9,6 @@ export class JouleLendTokenTool extends Tool {
   if you want to lend APT, mint will be "0x1::aptos_coin::AptosCoin"
   if you want to lend token other than APT, you need to provide the mint of that specific token
   if you want to lend fungible asset, add "0x1::aptos_coin::AptosCoin" as mint and provide fungible asset address
-
   if positionId is not provided, the positionId will be 1234 and newPosition should be true
   
   Popular tokens available in Joule Finance:
@@ -37,7 +36,7 @@ export class JouleLendTokenTool extends Tool {
   Inputs ( input is a JSON string ):
   amount: number, eg 1 or 0.01 (required)
   mint: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" (required)
-  positionId: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa" (required)
+  positionId: string, eg "1234" (required)
   newPosition: boolean, (required)
   `
 

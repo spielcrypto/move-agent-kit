@@ -35,7 +35,7 @@ export class JouleWithdrawTokenTool extends Tool {
   Inputs ( input is a JSON string ):
   amount: number, eg 1 or 0.01 (required)
   mint: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" (required)
-  positionId: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa" (required)
+  positionId: string, eg "1234" (required)
   `
 
 	constructor(private agent: AgentRuntime) {

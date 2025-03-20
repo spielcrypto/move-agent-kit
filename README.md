@@ -4,7 +4,7 @@
 
 An open-source toolkit for connecting AI agents to Move/Aptos protocols.
 
-![Move Agent Kit](./move-agent-kit.jpeg "Move Agent Kit")
+![Move Agent Kit Fullstack](./move-agent-kit.jpeg "Move Agent Kit Fullstack")
 
 ![NPM Downloads](https://img.shields.io/npm/dm/move-agent-kit?style=for-the-badge)
 ![<strong>GitHub</strong> forks](https://img.shields.io/github/forks/MetaMove/move-agent-kit?style=for-the-badge)
@@ -12,7 +12,7 @@ An open-source toolkit for connecting AI agents to Move/Aptos protocols.
 
 <br />
 
-<strong>Move Agent Kit</strong> is a comprehensive toolkit designed to simplify AI agents' interactions with Move-based blockchains. It provides a unified interface for performing various blockchain operations, making it easier for developers to build AI-powered applications that can interact with different Move-based protocols and applications.
+<strong>Move Agent Kit Fullstack</strong> is a comprehensive toolkit designed to simplify AI agents' interactions with Move-based blockchains. It provides a unified interface for performing various blockchain operations, making it easier for developers to build AI-powered applications that can interact with different Move-based protocols and applications.
 
 The toolkit serves as a bridge between AI agents and Move-based blockchain ecosystems, enabling seamless integration of blockchain capabilities into AI applications. Whether you're building a chatbot with wallet functionality or a complex multi-agent system, Move Agent Kit provides the necessary tools and abstractions to handle blockchain interactions efficiently.
 
@@ -64,6 +64,7 @@ Move Agent Kit provides native integration with several prominent Move-based app
 | Panora      | DEX aggregation operations          |
 | Aries       | Lending borrowing defi operations   |
 | Echo        | Staking operations                  |
+| emojicoins  | Emojicoins defi                     | 
 
 ### Upcoming Features
 - Image Generation capabilities
@@ -131,6 +132,7 @@ Create a configuration file .env in your project root:
 APTOS_PRIVATE_KEY="private key"
 ANTHROPIC_API_KEY="API Key"
 OPENAI_API_KEY="API Key"
+PLATFORM="sever" //if your run the app on backend
 
 // check docs here: https://github.com/econia-labs/emojicoin-dot-fun?tab=readme-ov-file#environment-variables
 NEXT_PUBLIC_MODULE_ADDRESS="0xface729284ae5729100b3a9ad7f7cc025ea09739cd6e7252aff0beb53619cafe"
@@ -178,7 +180,7 @@ import { HumanMessage } from "@langchain/core/messages";
 
 const llm = new ChatAnthropic({
     temperature: 0.7,
-    model: "claude-3-5-sonnet-20241022",
+    model: "gpt-4o-mini",
 });
 
 const memory = new MemorySaver();

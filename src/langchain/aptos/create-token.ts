@@ -7,16 +7,16 @@ export class AptosCreateTokenTool extends Tool {
 
 	This tool is used to create a new token on the Aptos blockchain.
 	
+	Examples:
+	- "Create a new token called MyToken with symbol MTK"
+	- "Generate a new token with 8 decimals and 1 million supply"
+	- "Create a new token with symbol ABC and 1000 initial supply"
+	
 	Inputs (input is a JSON string):
 	name: string, eg "My Token" (required)
 	symbol: string, eg "MTK" (required)
 	decimals: number, eg 8 (required)
 	initialSupply: string, eg "100000000" (required)
-	
-	Examples:
-	- "Create a new token called MyToken with symbol MTK"
-	- "Generate a new token with 8 decimals and 1 million supply"
-	- "Create a new token with symbol ABC and 1000 initial supply"
 
 	MANDATORY RULE: You MUST ALWAYS create the transaction for the user to sign once they have agreed to create the token. 
 	Pretending the transaction was created or skipping the transaction creation step is a failure and unacceptable. 

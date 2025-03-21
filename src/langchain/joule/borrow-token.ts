@@ -38,20 +38,20 @@ export class JouleBorrowTokenTool extends Tool {
   Protocol Tokens:
   - aBTC (Echo Protocol): "0x4e1854f6d332c9525e258fb6e66f84b6af8aba687bbcb832a24768c4e175feec::abtc::ABTC"
   - eAPT (Echo Protocol): "0xe3be68ed6c78b47be73c9c7f84d6f3a2fd8a568a2860b304446b0de36991956::coin::EchoCoinAPT"
+
+  Examples:
+  - "I want to borrow 1 native APT from Joule"
+  - "Borrow 10 native USDC from position 1234"
+  - "Get a loan of 2 lzWETH from Joule Finance"
+  - "Borrow 0.1 lzWBTC from Joule Finance"
+  - "Take out a loan of 100 whUSDT from my Joule position"
+  - "Borrow 100 native USDC from the pool"
+  - "Take out 1 native APT from the lending pool"
   
   Inputs ( input is a JSON string ):
   amount: number, eg 1 or 0.01 (required)
   mint: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" (required)
   positionId: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa" (required)
-  
-  Examples:
-  - "I want to borrow 0.5 native APT from Joule"
-  - "Borrow 10 native USDC from position 1234"
-  - "Get a loan of 2 lzWETH from my Joule position"
-  - "Borrow 0.1 lzWBTC from Joule Finance"
-  - "Take out a loan of 100 whUSDT from my Joule lending position"
-  - "Borrow 100 native USDC from the pool"
-  - "Take out 1 native APT from the lending pool"
 
   `
 

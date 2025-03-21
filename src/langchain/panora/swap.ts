@@ -54,12 +54,6 @@ export class PanoraSwapTool extends Tool {
 	Coin standard format: string::string::string
 	Fungible asset format: string::string::string::string
 
-	Inputs (input is a JSON string):
-	fromToken: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" or "usdt (name of the token)" (required)
-	toToken: string, eg (same as fromToken) (required)
-	swapAmount: number, eg 1 or 0.01 (required)
-	toWalletAddress: string, eg "0x123..." (optional, defaults to the current wallet)
-
 	Examples:
 	- "Swap 0.1 native APT for native USDC"
 	- "I want to swap 5 HAIR for lzUSDT"
@@ -67,6 +61,12 @@ export class PanoraSwapTool extends Tool {
 	- "Swap 2 BAPTMAN for native APT"
 	- "Trade 1 native APT for lzWETH"
 	- "Convert 100 native USDC to whUSDC"
+
+	Inputs (input is a JSON string):
+	fromToken: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" or "usdt (name of the token)" (required)
+	toToken: string, eg (same as fromToken) (required)
+	swapAmount: number, eg 1 or 0.01 (required)
+	toWalletAddress: string, eg "0x123..." (optional, defaults to the current wallet)
 
 	`
 

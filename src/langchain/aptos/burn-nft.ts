@@ -7,14 +7,14 @@ export class AptosBurnNFTTool extends Tool {
 
 	This tool is used to burn (destroy) an NFT from the current user's account.
 	
-	Inputs (input is a JSON string):
-	tokenId: string, eg "123" (required)
-	collection: string, eg "0x1::collection::Collection" (required)
-	
 	Examples:
 	- "Burn NFT #123"
 	- "Destroy my NFT from collection 0x789"
 	- "Remove NFT token 456"
+	
+	Inputs (input is a JSON string):
+	tokenId: string, eg "123" (required)
+	collection: string, eg "0x1::collection::Collection" (required)
 	`
 
 	constructor(private agent: AgentRuntime) {

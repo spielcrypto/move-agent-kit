@@ -59,10 +59,6 @@ export class AptosBalanceTool extends Tool {
   - whWBTC: "0xae478ff7d83ed072dbc5e264250e67ef58f57c99d89b447efd8a0a2e8b2be76e::coin::T"
   - ZAAP: "0xdcfa079344261bfde45e7f6281df091743b8d3098bf9e26e1c0212fc5b070621::zaaptos_token::ZaaptosCoin"
 
-  Inputs ( input is a JSON string ):
-  mint: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" or "
-  0x357b0b74bc833e95a115ad22604854d6b0fca151cecd94111770e5d6ffc9dc2b" (optional)
-  
   Examples:
   - "What is my APT balance?"
   - "Check my USDT balance"
@@ -70,6 +66,10 @@ export class AptosBalanceTool extends Tool {
   - "What's my balance for VIBE tokens"
   - "How many EDOG tokens do I have"
   - "What's my balance for token 0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT"
+  
+  Inputs ( input is a JSON string ):
+  mint: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" or "
+  0x357b0b74bc833e95a115ad22604854d6b0fca151cecd94111770e5d6ffc9dc2b" (optional)
   `
 
 	constructor(private agent: AgentRuntime) {

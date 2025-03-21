@@ -40,15 +40,15 @@ export class AptosMintTokenTool extends Tool {
 	- MOVE: "0x27fafcc4e39daac97556af8a803dbb52bcb03f0821898dc845ac54225b9793eb::move_coin::MoveCoin"
 	- ZAAP: "0xdcfa079344261bfde45e7f6281df091743b8d3098bf9e26e1c0212fc5b070621::zaaptos_token::ZaaptosCoin"
 	
-	Inputs (input is a JSON string):
-	amount: string, eg "100000000" (required)
-	mint: string, eg "0x1::aptos_coin::AptosCoin" (required)
-	
 	Examples:
 	- "Mint 1 APT"
 	- "Create 100 USDC"
 	- "Generate 0.1 WBTC"
 
+	Inputs (input is a JSON string):
+	amount: string, eg "100000000" (required)
+	mint: string, eg "0x1::aptos_coin::AptosCoin" (required)
+	
 	`
 
 	constructor(private agent: AgentRuntime) {

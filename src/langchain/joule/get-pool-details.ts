@@ -5,6 +5,13 @@ export class JouleGetPoolDetails extends Tool {
 	name = "joule_get_pool_details"
 	description = `the tool can be used to get a token / fungible asset pool details
 
+  Examples:
+  - "Show me the pool details for native USDC"
+  - "Get information about the APT pool"
+  - "What are the details of the lzWETH pool?"
+  - "Check the pool stats for whUSDT"
+  - "View the pool information for TruAPT"
+
   Inputs ( input is a JSON string ):
      mint: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" (required)
 

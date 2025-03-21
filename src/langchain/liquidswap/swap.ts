@@ -56,12 +56,6 @@ export class LiquidSwapSwapTool extends Tool {
 	Cannot swap fungible tokens - only coin standard swap allowed. If user is trying to swap fungible tokens, direct them to use Panora instead.
 	Coin standard format: string::string::string
 
-	Inputs (input is a JSON string):
-	mintX: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" or "usdt (name of the token)" (required)
-	mintY: string, eg (same as mintX) (required)
-	swapAmount: number, eg 1 or 0.01 (required)
-	minCoinOut: number, eg 1 or 0.01 (optional)
-
 	Examples:
 	- "Swap 0.1 native APT for native USDC"
 	- "I want to swap 5 HAIR for lzUSDT"
@@ -69,6 +63,12 @@ export class LiquidSwapSwapTool extends Tool {
 	- "Swap 2 BAPTMAN for native APT"
 	- "Trade 1 native APT for lzWETH"
 	- "Convert 100 native USDC to whUSDC"
+
+	Inputs (input is a JSON string):
+	mintX: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" or "usdt (name of the token)" (required)
+	mintY: string, eg (same as mintX) (required)
+	swapAmount: number, eg 1 or 0.01 (required)
+	minCoinOut: number, eg 1 or 0.01 (optional)
 
 	`
 

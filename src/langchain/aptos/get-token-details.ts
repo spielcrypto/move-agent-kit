@@ -39,14 +39,13 @@ export class AptosGetTokenDetailTool extends Tool {
 	- MOVE: "0x27fafcc4e39daac97556af8a803dbb52bcb03f0821898dc845ac54225b9793eb::move_coin::MoveCoin"
 	- ZAAP: "0xdcfa079344261bfde45e7f6281df091743b8d3098bf9e26e1c0212fc5b070621::zaaptos_token::ZaaptosCoin"
 	
-	Inputs (input is a JSON string):
-	mint: string, eg "0x1::aptos_coin::AptosCoin" (required)
-	
 	Examples:
 	- "Get details for APT token"
 	- "Show information about USDC"
 	- "What are the details of WBTC?"
-
+	
+	Inputs (input is a JSON string):
+	mint: string, eg "0x1::aptos_coin::AptosCoin" (required)
 	`
 
 	constructor(private agent: AgentRuntime) {

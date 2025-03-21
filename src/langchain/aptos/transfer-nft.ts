@@ -8,15 +8,15 @@ export class AptosTransferNFTTool extends Tool {
 
 	This tool is used to transfer an NFT from the current user's account to another address.
 	
-	Inputs (input is a JSON string):
-	tokenId: string, eg "123" (required)
-	collection: string, eg "0x1::collection::Collection" (required)
-	to: string, eg "0x123..." (required)
-	
 	Examples:
 	- "Transfer NFT #123 to 0x456..."
 	- "Send my NFT from collection 0x789 to 0xabc..."
 	- "Move NFT token 456 to 0xdef..."
+	
+	Inputs (input is a JSON string):
+	tokenId: string, eg "123" (required)
+	collection: string, eg "0x1::collection::Collection" (required)
+	to: string, eg "0x123..." (required)
 	`
 
 	constructor(private agent: AgentRuntime) {

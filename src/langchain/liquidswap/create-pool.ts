@@ -7,7 +7,7 @@ export class LiquidSwapCreatePoolTool extends Tool {
 	name = "liquidswap_create_pool"
 	description = `this tool can be used to create a new liquidity pool in liquidswap
 
-	IMPORTANT: When a user requests to create a pool for a token that has both native and bridged versions (like USDC, USDT, etc.) 
+	IMPORTANT: When a user requests a token that has both native and bridged versions (like USDC, USDT, etc.) 
 	without explicitly specifying which version they want, you MUST ask them to clarify whether they want the 
 	native version or a specific bridged version (LayerZero/Wormhole) before proceeding.
 
@@ -52,8 +52,16 @@ export class LiquidSwapCreatePoolTool extends Tool {
 	usdt, zusdt, zusdc, apt, sthapt, mod, thl, wusdc, zweth, wweth, cake, stapt, abtc, stone, truapt, sbtc, cash, hair, edog, gui, loon, cell, mgpt, uptos, chewy, baptman, moomoo, vibe
 	or whatever name the user has provided, you can use the token name to get the address of the token.
 
-	Cannot create pools for fungible tokens - only coin standard pools allowed. If user is trying to create a pool for fungible tokens, direct them to use Panora instead.
+	Cannot create pool for fungible tokens - only coin standard pools allowed. If user is trying to create a pool for fungible tokens, direct them to use Panora instead.
 	Coin standard format: string::string::string
+
+	Examples:
+	- "Create a new pool for native APT and native USDC"
+	- "I want to create a pool for HAIR and lzUSDT"
+	- "Set up a new pool with CASH and whUSDC"
+	- "Create a pool for BAPTMAN and native APT"
+	- "Initialize a pool for native APT and lzWETH"
+	- "Create a new pool for native USDC and whUSDC"
 
 	Inputs (input is a JSON string):
 	mintX: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" or "usdt (name of the token)" (required)
@@ -61,14 +69,6 @@ export class LiquidSwapCreatePoolTool extends Tool {
 	amountX: number, eg 1 or 0.01 (required)
 	amountY: number, eg 1 or 0.01 (required)
 	curveType: string, eg "uncorrelated" or "stable" (required)
-
-	Examples:
-	- "Create a new uncorrelated pool with 0.1 native APT and 1 native USDC"
-	- "I want to create a stable pool with 5 HAIR and 100 lzUSDT"
-	- "Create an uncorrelated pool with 10 CASH and 50 whUSDC"
-	- "Create a new stable pool with 2 BAPTMAN and 1 native APT"
-	- "Create an uncorrelated pool with 1 native APT and 0.05 lzWETH"
-	- "Create a stable pool with 100 native USDC and 100 whUSDC"
 
 	`
 

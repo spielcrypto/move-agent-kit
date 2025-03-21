@@ -40,14 +40,14 @@ export class AptosBurnTokenTool extends Tool {
 	- MOVE: "0x27fafcc4e39daac97556af8a803dbb52bcb03f0821898dc845ac54225b9793eb::move_coin::MoveCoin"
 	- ZAAP: "0xdcfa079344261bfde45e7f6281df091743b8d3098bf9e26e1c0212fc5b070621::zaaptos_token::ZaaptosCoin"
 	
-	Inputs (input is a JSON string):
-	amount: string, eg "100000000" (required)
-	mint: string, eg "0x1::aptos_coin::AptosCoin" (required)
-	
 	Examples:
 	- "Burn 1 APT"
 	- "Destroy 100 USDC"
 	- "Remove 0.1 WBTC"
+	
+	Inputs (input is a JSON string):
+	amount: string, eg "100000000" (required)
+	mint: string, eg "0x1::aptos_coin::AptosCoin" (required)
 
 	MANDATORY RULE: You MUST ALWAYS create the transaction for the user to sign once they have agreed to burn tokens. 
 	Pretending the transaction was created or skipping the transaction creation step is a failure and unacceptable. 

@@ -6,9 +6,9 @@ import { parseFungibleAssetAddressToWrappedAssetAddress } from "../../utils/pars
 
 export class LiquidSwapRemoveLiquidityTool extends Tool {
 	name = "liquidswap_remove_liquidity"
-	description = `this tool can be used to remove liquidity from liquidswap pools
+	description = `this tool can be used to remove liquidity from a pool in liquidswap
 
-	IMPORTANT: When a user requests to remove liquidity for a token that has both native and bridged versions (like USDC, USDT, etc.) 
+	IMPORTANT: When a user requests a token that has both native and bridged versions (like USDC, USDT, etc.) 
 	without explicitly specifying which version they want, you MUST ask them to clarify whether they want the 
 	native version or a specific bridged version (LayerZero/Wormhole) before proceeding.
 
@@ -53,13 +53,8 @@ export class LiquidSwapRemoveLiquidityTool extends Tool {
 	usdt, zusdt, zusdc, apt, sthapt, mod, thl, wusdc, zweth, wweth, cake, stapt, abtc, stone, truapt, sbtc, cash, hair, edog, gui, loon, cell, mgpt, uptos, chewy, baptman, moomoo, vibe
 	or whatever name the user has provided, you can use the token name to get the address of the token.
 
-	Cannot remove liquidity for fungible tokens - only coin standard pools allowed. If user is trying to remove liquidity for fungible tokens, direct them to use Panora instead.
+	Cannot remove fungible tokens - only coin standard remove liquidity allowed. If user is trying to remove fungible tokens, direct them to use Panora instead.
 	Coin standard format: string::string::string
-
-	Inputs (input is a JSON string):
-	mintX: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" or "usdt (name of the token)" (required)
-	mintY: string, eg (same as mintX) (required)
-	lpAmount: number, eg 1 or 0.01 (required)
 
 	Examples:
 	- "Remove liquidity of 0.1 LP tokens from native APT - native USDC pool"
@@ -68,6 +63,13 @@ export class LiquidSwapRemoveLiquidityTool extends Tool {
 	- "Remove 2 LP tokens from BAPTMAN - native APT pool"
 	- "Remove liquidity of 1 LP token from native APT - lzWETH pool"
 	- "Remove 100 LP tokens from native USDC - whUSDC pool"
+
+	Inputs (input is a JSON string):
+	mintX: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" or "usdt (name of the token)" (required)
+	mintY: string, eg (same as mintX) (required)
+	lpAmount: number, eg 1 or 0.01 (required)
+	minMintX: number, eg 1 or 0.01 (optional)
+	minMintY: number, eg 1 or 0.01 (optional)
 
 	`
 
@@ -99,8 +101,8 @@ export class LiquidSwapRemoveLiquidityTool extends Tool {
 				parseFungibleAssetAddressToWrappedAssetAddress(mintX),
 				parseFungibleAssetAddressToWrappedAssetAddress(mintY),
 				convertAmountFromHumanReadableToOnChain(parsedInput.lpAmount, 6),
-				convertAmountFromHumanReadableToOnChain(parsedInput.minMintX || 0, mintXDetail.decimals),
-				convertAmountFromHumanReadableToOnChain(parsedInput.minMintY || 0, mintYDetail.decimals)
+				convertAmountFromHumanReadableToOnChain(parsedInput.minMintX, 6),
+				convertAmountFromHumanReadableToOnChain(parsedInput.minMintY, 6)
 			)
 
 			return JSON.stringify({

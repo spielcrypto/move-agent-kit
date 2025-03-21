@@ -40,16 +40,16 @@ export class AptosTransferTokenTool extends Tool {
 	- MOVE: "0x27fafcc4e39daac97556af8a803dbb52bcb03f0821898dc845ac54225b9793eb::move_coin::MoveCoin"
 	- ZAAP: "0xdcfa079344261bfde45e7f6281df091743b8d3098bf9e26e1c0212fc5b070621::zaaptos_token::ZaaptosCoin"
 	
-	Inputs (input is a JSON string):
-	amount: string, eg "100000000" (required)
-	mint: string, eg "0x1::aptos_coin::AptosCoin" (required)
-	to: string, eg "0x123..." (required)
-	
 	Examples:
 	- "Transfer 1 APT to 0x123..."
 	- "Send 100 USDC to 0x456..."
 	- "Move 0.1 WBTC to 0x789..."
 
+	Inputs (input is a JSON string):
+	amount: string, eg "100000000" (required)
+	mint: string, eg "0x1::aptos_coin::AptosCoin" (required)
+	to: string, eg "0x123..." (required)
+	
 	`
 
 	constructor(private agent: AgentRuntime) {

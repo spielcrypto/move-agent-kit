@@ -6,9 +6,9 @@ import { parseFungibleAssetAddressToWrappedAssetAddress } from "../../utils/pars
 
 export class LiquidSwapAddLiquidityTool extends Tool {
 	name = "liquidswap_add_liquidity"
-	description = `this tool can be used to add liquidity to liquidswap pools
+	description = `this tool can be used to add liquidity to a pool in liquidswap
 
-	IMPORTANT: When a user requests to add liquidity for a token that has both native and bridged versions (like USDC, USDT, etc.) 
+	IMPORTANT: When a user requests a token that has both native and bridged versions (like USDC, USDT, etc.) 
 	without explicitly specifying which version they want, you MUST ask them to clarify whether they want the 
 	native version or a specific bridged version (LayerZero/Wormhole) before proceeding.
 
@@ -53,22 +53,22 @@ export class LiquidSwapAddLiquidityTool extends Tool {
 	usdt, zusdt, zusdc, apt, sthapt, mod, thl, wusdc, zweth, wweth, cake, stapt, abtc, stone, truapt, sbtc, cash, hair, edog, gui, loon, cell, mgpt, uptos, chewy, baptman, moomoo, vibe
 	or whatever name the user has provided, you can use the token name to get the address of the token.
 
-	Cannot add liquidity for fungible tokens - only coin standard pools allowed. If user is trying to add liquidity for fungible tokens, direct them to use Panora instead.
+	Cannot add fungible tokens - only coin standard add liquidity allowed. If user is trying to add fungible tokens, direct them to use Panora instead.
 	Coin standard format: string::string::string
+
+	Examples:
+	- "Add liquidity of 0.1 native APT and 1 native USDC"
+	- "I want to add 5 HAIR and 100 lzUSDT"
+	- "Provide liquidity with 10 CASH and 50 whUSDC"
+	- "Add 2 BAPTMAN and 0.5 native APT to the pool"
+	- "Contribute 1 native APT and 10 lzWETH as liquidity"
+	- "Add 100 native USDC and 100 whUSDC to the pool"
 
 	Inputs (input is a JSON string):
 	mintX: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" or "usdt (name of the token)" (required)
 	mintY: string, eg (same as mintX) (required)
 	amountX: number, eg 1 or 0.01 (required)
 	amountY: number, eg 1 or 0.01 (required)
-
-	Examples:
-	- "Add liquidity of 0.1 native APT and 1 native USDC"
-	- "I want to add 5 HAIR and 100 lzUSDT as liquidity"
-	- "Provide liquidity with 10 CASH and 50 whUSDC"
-	- "Add 2 BAPTMAN and 1 native APT to the pool"
-	- "Add liquidity of 1 native APT and 0.05 lzWETH"
-	- "Provide 100 native USDC and 100 whUSDC as liquidity"
 
 	`
 

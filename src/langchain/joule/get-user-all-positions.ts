@@ -9,6 +9,13 @@ export class JouleGetUserAllPositions extends Tool {
 
 	keep userAddress blank if user wants to get their own position or didn't provide any other user's address
 
+  Examples:
+  - "Show me all my Joule positions"
+  - "List all my lending positions"
+  - "Get all positions for address 0x123...abc"
+  - "View all my active positions"
+  - "Check all my Joule Finance positions"
+
   Inputs ( input is a JSON string ):
      userAddress: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa" (optional)
   `

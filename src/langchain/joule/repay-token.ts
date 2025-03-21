@@ -38,13 +38,7 @@ export class JouleRepayTokenTool extends Tool {
   Protocol Tokens:
   - aBTC (Echo Protocol): "0x4e1854f6d332c9525e258fb6e66f84b6af8aba687bbcb832a24768c4e175feec::abtc::ABTC"
   - eAPT (Echo Protocol): "0xe3be68ed6c78b47be73c9c7f84d6f3a2fd8a568a2860b304446b0de36991956::coin::EchoCoinAPT"
-  
-  Inputs ( input is a JSON string ):
-  amount: number, eg 1 or 0.01 (required)
-  mint: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" (required)
-  positionId: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa" (required)
-  fungibleAssetAddress: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa" (optional)
-  
+
   Examples:
   - "I want to repay 0.5 native APT to my Joule position"
   - "Repay 10 native USDC to position 1234"
@@ -53,7 +47,12 @@ export class JouleRepayTokenTool extends Tool {
   - "Pay off 100 whUSDT on my Joule position"
   - "Repay 100 native USDC to the pool"
   - "Pay back 1 native APT to the lending pool"
-
+  
+  Inputs ( input is a JSON string ):
+  amount: number, eg 1 or 0.01 (required)
+  mint: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" (required)
+  positionId: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa" (required)
+  fungibleAssetAddress: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa" (optional)
   `
 
 	constructor(private agent: AgentRuntime) {

@@ -3,7 +3,15 @@ import type { AgentRuntime } from "../.."
 
 export class AriesCreateProfileTool extends Tool {
 	name = "aries_create_profile"
-	description = `this tool can be used to create a profile in Aries
+	description = `This tool can be used to create a profile in Aries lending protocol.
+	
+	Examples:
+	- "Create an Aries profile"
+	- "Setup my Aries account"
+	- "Initialize my profile on Aries protocol"
+	
+	Inputs (input is a JSON string):
+	No inputs required for this tool.
     `
 
 	constructor(private agent: AgentRuntime) {

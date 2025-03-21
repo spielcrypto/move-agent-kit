@@ -4,11 +4,23 @@ import { type AgentRuntime, parseJson } from "../.."
 
 export class AptosTransferNFTTool extends Tool {
 	name = "aptos_transfer_nft"
-	description = `this tool can be used to transfer any NFT on aptos to receipient
+	description = `Transfer an NFT to another address.
 
-  Inputs ( input is a JSON string ):
-  to: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa" (required)
-  mint: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT" (required)`
+	This tool is used to transfer an NFT from the current user's account to another address.
+	
+	Inputs (input is a JSON string):
+	tokenId: string, eg "123" (required)
+	collection: string, eg "0x1::collection::Collection" (required)
+	to: string, eg "0x123..." (required)
+	
+	Examples:
+	- "Transfer NFT #123 to 0x456..."
+	- "Send my NFT from collection 0x789 to 0xabc..."
+	- "Move NFT token 456 to 0xdef..."
+
+	MANDATORY RULE: You MUST ALWAYS create the transaction for the user to sign once they have agreed to transfer the NFT. 
+	Pretending the transaction was created or skipping the transaction creation step is a failure and unacceptable. 
+	The transaction must be created and presented to the user for signature before proceeding.`
 
 	constructor(private agent: AgentRuntime) {
 		super()

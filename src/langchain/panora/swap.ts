@@ -6,8 +6,8 @@ export class PanoraSwapTool extends Tool {
 	description = `this tool can be used to swap tokens in Panora, a liquidity aggregator on Aptos
 
 	IMPORTANT: When a user requests to swap a token that has both native and bridged versions (like USDC, USDT, etc.) 
-	without explicitly specifying which version they want, you MUST ask them to clarify whether they want the 
-	native version or a specific bridged version (LayerZero/Wormhole) before proceeding.
+	without explicitly specifying which version they want, the system will default to using the native version 
+	(0x2::usdc::USDC for USDC and 0x2::usdt::USDT for USDT) unless explicitly specified otherwise.
 
 	Popular tokens that can be swapped include:
 

@@ -8,7 +8,7 @@ export class AriesRepayTool extends Tool {
 	description = `Repay borrowed tokens to Aries lending protocol.
 
 	IMPORTANT NOTICE: When a user requests a token that has both native and bridged versions (like USDC, USDT), 
-	you MUST ask them to clarify which version they want (native or bridged) before proceeding.
+	the system will default to using the native version (0x2::usdc::USDC for USDC and 0x2::usdt::USDT for USDT) unless explicitly specified otherwise.
 
 	Popular tokens that can be repaid include:
 

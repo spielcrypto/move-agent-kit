@@ -11,8 +11,8 @@ export class JouleWithdrawTokenTool extends Tool {
   if you want to withdraw fungible asset, add "0x1::aptos_coin::AptosCoin" as mint and provide fungible asset address
 
   IMPORTANT: When a user requests a token that has both native and bridged versions (like USDC, USDT, etc.) 
-  without explicitly specifying which version they want, you MUST ask them to clarify whether they want the 
-  native version or a specific bridged version (LayerZero/Wormhole) before proceeding.
+  without explicitly specifying which version they want, the system will default to using the native version 
+  (0x2::usdc::USDC for USDC and 0x2::usdt::USDT for USDT) unless explicitly specified otherwise.
   
   Popular tokens available in Joule Finance:
   Native (Original) Tokens:

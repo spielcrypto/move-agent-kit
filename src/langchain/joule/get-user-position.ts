@@ -11,6 +11,13 @@ export class JouleGetUserPosition extends Tool {
 	ask user to provide positionId from the list of positions they have if they want to get details about a specific position.
 	do not fill random positionId if the user didn't provide any positionId
 
+  Examples:
+  - "Show me my position details"
+  - "Get details for position 1234"
+  - "What's the status of my Joule position"
+  - "Check position details for address 0x123...abc"
+  - "View my lending position information"
+
   Inputs ( input is a JSON string ):
      userAddress: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa" (optional)
      positionId: string, eg "0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa" (required)

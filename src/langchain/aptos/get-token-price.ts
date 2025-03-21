@@ -47,9 +47,7 @@ export class AptosGetTokenPriceTool extends Tool {
 	- "Show me the price of USDC"
 	- "Get WBTC price"
 
-	MANDATORY RULE: You MUST ALWAYS fetch the token price from the blockchain or price oracle. 
-	Pretending to fetch the price or returning default values is a failure and unacceptable. 
-	The actual token price must be retrieved from the blockchain or price oracle.`
+	`
 
 	constructor(private agent: AgentRuntime) {
 		super()

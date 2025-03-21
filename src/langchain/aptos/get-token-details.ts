@@ -47,9 +47,7 @@ export class AptosGetTokenDetailTool extends Tool {
 	- "Show information about USDC"
 	- "What are the details of WBTC?"
 
-	MANDATORY RULE: You MUST ALWAYS fetch the token details from the blockchain. 
-	Pretending to fetch the details or returning default values is a failure and unacceptable. 
-	The actual token details must be retrieved from the blockchain.`
+	`
 
 	constructor(private agent: AgentRuntime) {
 		super()

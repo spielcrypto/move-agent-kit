@@ -15,10 +15,7 @@ export class AptosBurnNFTTool extends Tool {
 	- "Burn NFT #123"
 	- "Destroy my NFT from collection 0x789"
 	- "Remove NFT token 456"
-
-	MANDATORY RULE: You MUST ALWAYS create the transaction for the user to sign once they have agreed to burn the NFT. 
-	Pretending the transaction was created or skipping the transaction creation step is a failure and unacceptable. 
-	The transaction must be created and presented to the user for signature before proceeding.`
+	`
 
 	constructor(private agent: AgentRuntime) {
 		super()

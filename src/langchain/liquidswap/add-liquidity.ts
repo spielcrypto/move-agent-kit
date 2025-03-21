@@ -70,9 +70,7 @@ export class LiquidSwapAddLiquidityTool extends Tool {
 	- "Add liquidity of 1 native APT and 0.05 lzWETH"
 	- "Provide 100 native USDC and 100 whUSDC as liquidity"
 
-	MANDATORY RULE: You MUST ALWAYS create the transaction for the user to sign once they have agreed to add liquidity. 
-	Pretending the transaction was created or skipping the transaction creation step is a failure and unacceptable. 
-	The transaction must be created and presented to the user for signature before proceeding.`
+	`
 
 	constructor(private agent: AgentRuntime) {
 		super()

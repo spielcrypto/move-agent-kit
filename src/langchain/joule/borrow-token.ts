@@ -53,9 +53,6 @@ export class JouleBorrowTokenTool extends Tool {
   - "Borrow 100 native USDC from the pool"
   - "Take out 1 native APT from the lending pool"
 
-	MANDATORY RULE: You MUST ALWAYS create the transaction for the user to sign once they have agreed to borrow tokens. 
-	Pretending the transaction was created or skipping the transaction creation step is a failure and unacceptable. 
-	The transaction must be created and presented to the user for signature before proceeding.
   `
 
 	constructor(private agent: AgentRuntime) {

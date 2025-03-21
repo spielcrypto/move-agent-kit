@@ -70,10 +70,6 @@ export class AptosBalanceTool extends Tool {
   - "What's my balance for VIBE tokens"
   - "How many EDOG tokens do I have"
   - "What's my balance for token 0xf22bede237a07e121b56d91a491eb7bcdfd1f5907926a9e58338f964a01b17fa::asset::USDT"
-
-	MANDATORY RULE: You MUST ALWAYS actually check the balance by calling the getBalance function with the correct mint address. 
-	Pretending to check the balance or returning a default value without making the actual on-chain call is a failure and unacceptable. 
-	The balance must be fetched from the blockchain and returned to the user.
   `
 
 	constructor(private agent: AgentRuntime) {

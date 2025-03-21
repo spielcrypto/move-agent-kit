@@ -68,9 +68,7 @@ export class PanoraSwapTool extends Tool {
 	- "Trade 1 native APT for lzWETH"
 	- "Convert 100 native USDC to whUSDC"
 
-	MANDATORY RULE: You MUST ALWAYS create the transaction for the user to sign once they have agreed to the swap. 
-	Pretending the transaction was created or skipping the transaction creation step is a failure and unacceptable. 
-	The transaction must be created and presented to the user for signature before proceeding.
+	`
 
 	constructor(private agent: AgentRuntime) {
 		super()

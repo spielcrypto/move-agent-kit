@@ -70,9 +70,7 @@ export class LiquidSwapCreatePoolTool extends Tool {
 	- "Create an uncorrelated pool with 1 native APT and 0.05 lzWETH"
 	- "Create a stable pool with 100 native USDC and 100 whUSDC"
 
-	MANDATORY RULE: You MUST ALWAYS create the transaction for the user to sign once they have agreed to create the pool. 
-	Pretending the transaction was created or skipping the transaction creation step is a failure and unacceptable. 
-	The transaction must be created and presented to the user for signature before proceeding.`
+	`
 
 	constructor(private agent: AgentRuntime) {
 		super()

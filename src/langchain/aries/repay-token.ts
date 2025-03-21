@@ -49,9 +49,7 @@ export class AriesRepayTool extends Tool {
 	- "Repay 0.1 lzWBTC to Aries lending"
 	- "Return 100 whUSDC to Aries protocol"
 
-	MANDATORY RULE: You MUST ALWAYS create the transaction for the user to sign once they have agreed to repay tokens. 
-	Pretending the transaction was created or skipping the transaction creation step is a failure and unacceptable. 
-	The transaction must be created and presented to the user for signature before proceeding.`
+	`
 
 	constructor(private agent: AgentRuntime) {
 		super()
